@@ -83,7 +83,7 @@ To install this module, run the following commands:
 	make install
 ```
 
-SUPPORT AND DOCUMENTATION
+## SUPPORT AND DOCUMENTATION
 
 After installing, you can find documentation for this module with the
 perldoc command.
@@ -95,7 +95,7 @@ perldoc command.
 If you want to contribute to this module, write me an email or create a
 Pull request on Github: https://github.com/sonntagd/Dancer2-Plugin-Auth-Extensible-Rights
 
-LICENSE AND COPYRIGHT
+## LICENSE AND COPYRIGHT
 
 Copyright (C) 2016 Dominic Sonntag
 
