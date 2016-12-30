@@ -1,0 +1,43 @@
+# This is the main configuration file of your Dancer2 app
+# env-related settings should go to environments/$env.yml
+# all the settings in this file will be loaded at Dancer's startup.
+
+# Your application's name
+appname: "TestDPAE-Rights"
+
+# when the charset is set to UTF-8 Dancer2 will handle for you
+# all the magic of encoding and decoding. You should not care
+# about unicode within your app when this setting is set (recommended).
+charset: "UTF-8"
+
+#log: core
+#logger: console
+
+plugins:
+  Auth::Extensible:
+    realms:
+      config1:
+        provider: Config
+        users:
+          - user: dave
+            pass: ss
+            roles:
+              - Developer
+              - Manager
+              - BeerDrinker
+          - user: bob
+            pass: ass
+            roles:
+              - Tester
+  Auth::Extensible::Rights:
+    rights:
+      createitem:
+        - BeerDrinker
+        - Tester
+        - Manager
+      deleteitem:
+        - BeerDrinker
+        - [ Manager, Tester ]
+      deleteall: Manager
+      ctest:
+        all: 1
