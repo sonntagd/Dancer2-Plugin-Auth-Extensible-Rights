@@ -38,16 +38,32 @@ C<require_any_roles> with those roles.
 
 Configure the rights:
 
-    plugins:
-        Auth::Extensible::Rights:
-            rights:
-                create_item:
-                    - BeerDrinker
-                    - Tester
-                    - Manager
-                delete_item:
-                    - [ Manager, Tester ]
-                delete_all: Manager
+  plugins:
+    # sample config for Auth::Extensible:
+    Auth::Extensible:
+      realms:
+        config1:
+          provider: Config
+          users:
+            - user: dave
+              pass: supersecret
+              roles:
+                - Developer
+                - Manager
+                - BeerDrinker
+            - user: bob
+              pass: alsosecret
+              roles:
+                - Tester
+    Auth::Extensible::Rights:
+      rights:
+        create_item:
+          - BeerDrinker
+          - Tester
+          - Manager
+        delete_item:
+          - [ Manager, Tester ]
+        delete_all: Manager
 
 Define that a user must be logged in and have the right to access a route:
 

@@ -20,13 +20,13 @@ plugins:
         provider: Config
         users:
           - user: dave
-            pass: ss
+            pass: supersecret
             roles:
               - Developer
               - Manager
               - BeerDrinker
           - user: bob
-            pass: ass
+            pass: alsosecret
             roles:
               - Tester
   Auth::Extensible::Rights:
