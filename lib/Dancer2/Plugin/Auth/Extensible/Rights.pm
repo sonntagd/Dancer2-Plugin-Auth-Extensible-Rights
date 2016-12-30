@@ -18,10 +18,6 @@ has rights => (
 
 plugin_keywords 'require_right';
 
-sub BUILD {
-    my $plugin = shift;
-}
-
 =head1 NAME
 
 Dancer2::Plugin::Auth::Extensible::Rights - A rights mapper for Dancer2::Plugin::Auth::Extensible roles.
