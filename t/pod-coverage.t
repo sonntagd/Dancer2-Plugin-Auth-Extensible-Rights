@@ -31,6 +31,6 @@ else {
             qr/^(ClassHooks|PluginKeyword|dancer_app|execute_plugin_hook|hook|keywords|on_plugin_import|plugin_args|plugin_setting|register|register_hook|register_plugin|var)$/
         ]
     };
-    pod_coverage_ok( "Dancer2::Plugin::Routing", $trustme );
+    pod_coverage_ok( "Dancer2::Plugin::Auth::Extensible::Rights", $trustme );
 
 }

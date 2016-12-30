@@ -18,6 +18,10 @@ WriteMakefile(
         'Test::More' => 0,
         'YAML' => 0,    # for config files and tests
     },
+    TEST_REQUIRES => {
+        'Test::Pod::Coverage' => 1.08,
+        'Pod::Coverage'       => 0.18,
+    },
     PREREQ_PM => {
         'Dancer2'                           => 0,
         'Dancer2::Plugin::Auth::Extensible' => '0.620',
