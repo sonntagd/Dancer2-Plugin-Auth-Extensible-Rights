@@ -13,7 +13,7 @@ set plugins => {
                 users    => [
                     {
                         user  => 'dave',
-                        pass  => 'ss',
+                        pass  => 'supersecret',
                         roles => [ 'Developer', 'Manager', 'BeerDrinker' ]
                     },
                     {
@@ -30,9 +30,9 @@ set plugins => {
             createitem => [ 'BeerDrinker', 'Tester', 'Manager' ],
             deleteitem => [ 'BeerDrinker', [ 'Manager', 'Tester' ] ],
             deleteall  => 'Manager',
-            ctest      => {
-                all => 1
-            },
+            #ctest      => {
+            #    all => 1
+            #},
         },
     },
 };

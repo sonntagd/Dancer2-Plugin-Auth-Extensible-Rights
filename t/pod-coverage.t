@@ -21,4 +21,16 @@ eval "use Pod::Coverage $min_pc";
 plan skip_all => "Pod::Coverage $min_pc required for testing POD coverage"
     if $@;
 
-all_pod_coverage_ok();
+if ( $ENV{DANCER2_COVERAGE_TESTING} ) {
+    all_pod_coverage_ok();
+}
+else {
+    plan tests => 1;
+    my $trustme = {
+        trustme => [
+            qr/^(ClassHooks|PluginKeyword|dancer_app|execute_plugin_hook|hook|keywords|on_plugin_import|plugin_args|plugin_setting|register|register_hook|register_plugin|var)$/
+        ]
+    };
+    pod_coverage_ok( "Dancer2::Plugin::Routing", $trustme );
+
+}
