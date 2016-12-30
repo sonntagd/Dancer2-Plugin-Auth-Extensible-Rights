@@ -16,10 +16,11 @@ WriteMakefile(
     },
     BUILD_REQUIRES => {
         'Test::More' => 0,
+        'YAML' => 0,    # for config files and tests
     },
     PREREQ_PM => {
-        #'ABC'              => 1.6,
-        #'Foo::Bar::Module' => 5.0401,
+        'Dancer2'                           => 0,
+        'Dancer2::Plugin::Auth::Extensible' => '0.620',
     },
     dist  => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean => { FILES => 'Dancer2-Plugin-Auth-Extensible-Rights-*' },
