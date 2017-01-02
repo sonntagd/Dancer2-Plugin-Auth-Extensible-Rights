@@ -1,7 +1,0 @@
-Dancer2-Plugin-Auth-Extensible-Rights-*
-config.yml
-dancer2.pl
-Dockerfile
-.gitignore
-.git/*
-MANIFEST.SKIP

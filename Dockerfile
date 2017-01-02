@@ -8,6 +8,8 @@ RUN cpanm Dancer2::Plugin::Auth::Extensible && rm -rf /root/.cpanm
 
 RUN cpanm LWP::Protocol::https
 
+RUN cpanm Test::CheckManifest Test::Pod::Coverage
+
 RUN mkdir /app
 
 WORKDIR /app

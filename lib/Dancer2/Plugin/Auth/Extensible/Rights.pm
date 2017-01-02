@@ -84,10 +84,12 @@ cause the application to croak on load.
 
 sub require_right {
     my $plugin  = shift;
-    my $right   = $plugin->rights->{ shift() };
+    my $right   = shift;
     my $coderef = shift;
 
-    my @roles = ref $right eq 'ARRAY' ? @{$right} : $right;
+    my $roles = $plugin->rights->{$right};
+
+    my @roles = ref $roles eq 'ARRAY' ? @{$roles} : $roles;
 
     # check for wrong definition
     if ( grep { ref and ref ne 'ARRAY' } @roles ) {
