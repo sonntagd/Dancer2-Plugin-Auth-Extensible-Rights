@@ -52,7 +52,7 @@ Configure the rights:
 Define that a user must be logged in and have the right to access a route:
 
 ```perl
-    get '/create-item' => require_right create_item => sub { show_create_item_form(); };
+get '/create-item' => require_right create_item => sub { show_create_item_form(); };
 ```
 
 ## CONTROLLING ACCESS TO ROUTES
@@ -60,9 +60,9 @@ Define that a user must be logged in and have the right to access a route:
 ### require_right
 
 ```perl
-    post '/delete-item/:id' => require_right delete_item => sub {
-        ...
-    };
+post '/delete-item/:id' => require_right delete_item => sub {
+    ...
+};
 ```
 
 Requires that the user must be logged in as a user who has the specified right. If the user is not 
@@ -77,10 +77,10 @@ cause the application to croak on load.
 To install this module, run the following commands:
 
 ```bash
-	perl Makefile.PL
-	make
-	make test
-	make install
+    perl Makefile.PL
+    make
+    make test
+    make install
 ```
 
 ## SUPPORT AND DOCUMENTATION
@@ -89,7 +89,7 @@ After installing, you can find documentation for this module with the
 perldoc command.
 
 ```bash
-    perldoc Dancer2::Plugin::Auth::Extensible::Rights
+perldoc Dancer2::Plugin::Auth::Extensible::Rights
 ```
 
 If you want to contribute to this module, write me an email or create a
